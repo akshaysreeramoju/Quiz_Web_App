@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+        <title>Login page</title>
+        <link rel = "icon" href ="/static/img/l.png"
+        type = "image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+          <img src="/static/img/1.jpg"/>
+        </div>
+        <div class="text">
+          <h1>Online Quiz</h1>
+        </div>
+      </div>
+    <form action="{{url_for('rose')}}" method="POST">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h2>Online Quiz System</h2>
+            <h>welcome to online quiz </h3>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="username">Email</label>
+            <input type="email" placeholder="email" name="email" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="pswrd">Password</label>
+            <input type="password" placeholder=" Password" name="pswrd" required>
+
+            <!-- sub container for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+
+
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+            <!-- Sign up link -->
+            <p class="register">Not a member?  <a href="{{url_for('register')}}">Register here!</a></p>
+
+        </div>
+
+    </form>
+</body>
+</html>

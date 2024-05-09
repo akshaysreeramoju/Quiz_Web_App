@@ -1,0 +1,21 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://i.pinimg.com/736x/11/d5/95/11d5953e68e6e41f024164d26c319e32.jpg');
+    background-repeat: no-repeat;
+    background-size:90%;
+}
+
+h1 {
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+#score {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 50px;
+}

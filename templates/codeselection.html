@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/static/css/style3.css"/>
+</head>
+<body>
+
+  <form action="" method='POST'>
+  <div class="subject-container">
+    <h1>Welcome to the Online Quiz!</h1>
+    <h3>Please select a subject:</h3>
+    {{ form.hidden_tag() }}
+        {{ form.question.label }}
+
+        {% for subfield in form.question %}
+            {{ subfield }}
+            {{ subfield.label }}
+            <br>
+        {% endfor %}
+        <br>
+        {{ form.submit() }}
+    </form>
+  </div>
+</body>
+</html>

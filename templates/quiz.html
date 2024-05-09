@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz System</title>
+    <link rel="stylesheet" href="/static/css/style2.css"/>
+      <script src="/static/js/code2.js"></script>
+</head>
+<body>
+    <h1>Online Quiz System</h1>
+    <div id="quiz">
+        <!-- Quiz questions and choices -->
+            <div class="question">
+                <div class="question-text">Who is the father of C language?</div>
+                <div class="choice">
+                    <input type="radio" name="q1" value="1"> Guido Van RossumSteve Jobs
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q1" value="2"> James Gosling
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q1" value="3"> Dennis Ritchie
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q1" value="4"> Rasmus Lerdorf
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text"> Which of the following cannot be a variable name in C?</div>
+                <div class="choice">
+                    <input type="radio" name="q2" value="1"> volatile
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q2" value="2"> true
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q2" value="3"> friend
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q2" value="4"> export
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Which of these are selection statements in Java?</div>
+                <div class="choice">
+                    <input type="radio" name="q3" value="1">for
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q3" value="2"> while
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q3" value="3"> do-while
+                </div>
+                <div class="choice">
+                    <input type="radio" name="q3" value="4"> all of the mentioned
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="quiz-form" action="{{ url_for('result') }}" method="POST">
+        <button id="submit-btn" type="button" onclick="calculateScore()">Submit</button>
+        <input type="hidden" name="quizScore" id="quiz-score-input">
+    </form>
+</body>
+</html>

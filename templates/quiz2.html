@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz System</title>
+    <link rel="stylesheet" href="/static/css/style2.css"/>
+    <script src="/static/js/code3.js"></script>
+</head>
+<body>
+    <h1>Online Quiz System</h1>
+    <div id="quiz">
+        <div class="question">
+            <div class="question-text">Who developed python programming language?</div>
+            <div class="choice">
+                <input type="radio" name="q1" value="1"> Wick Van Rossum
+            </div>
+            <div class="choice">
+                <input type="radio" name="q1" value="2"> Rasmus Lerdrof
+            </div>
+            <div class="choice">
+                <input type="radio" name="q1" value="3"> Guido Van Rossum
+            </div>
+            <div class="choice">
+                <input type="radio" name="q1" value="4"> Niene Stom
+            </div>
+        </div>
+        
+        <div class="question">
+            <div class="question-text">Is python case sensitive when dealing with identifiers?</div>
+            <div class="choice">
+                <input type="radio" name="q2" value="1"> no
+            </div>
+            <div class="choice">
+                <input type="radio" name="q2" value="2"> yes
+            </div>
+            <div class="choice">
+                <input type="radio" name="q2" value="3"> machine independent
+            </div>
+            <div class="choice">
+                <input type="radio" name="q2" value="4"> none of the mentioned
+            </div>
+        </div>
+        
+        <div class="question">
+            <div class="question-text">Which keyword is used for function in python language?</div>
+            <div class="choice">
+                <input type="radio" name="q3" value="1"> function
+            </div>
+            <div class="choice">
+                <input type="radio" name="q3" value="2"> def
+            </div>
+            <div class="choice">
+                <input type="radio" name="q3" value="3"> fun
+            </div>
+            <div class="choice">
+                <input type="radio" name="q3" value="4"> define
+            </div>
+        </div>
+        
+        <form id="quiz-form" action="{{ url_for('result') }}" method="POST">
+            <button id="submit-btn" type="button" onclick="calculateScore()">Submit</button>
+            <input type="hidden" name="quizScore" id="quiz-score-input">
+        
+        <div id="score"></div>
+    </div>
+    </body>
+    </html>
+    
